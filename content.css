@@ -1,0 +1,9 @@
+html[data-cgl-enabled="true"] [data-cgl-hide-turn],
+html[data-cgl-enabled="true"] [data-cgl-hide-card] {
+  display: none !important;
+}
+
+[data-cgl-picked] {
+  outline: 3px solid #10a37f !important;
+  outline-offset: 3px !important;
+}

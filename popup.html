@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatGPT 精简显示</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <h1>ChatGPT 精简显示</h1>
+  <p id="version" class="hint"></p>
+  <label class="switch"><input id="enabled" type="checkbox" checked>启用精简显示</label>
+  <label class="field">保留最近会话轮次<input id="turns" type="number" min="1" max="100" value="5" required></label>
+  <label class="field">保留最近工具卡片<input id="cards" type="number" min="0" max="100" value="5" required></label>
+  <p class="hint">一轮 = 一次提问及后续回复。卡片数量按当前保留的会话计算，填 0 隐藏全部卡片。</p>
+  <button id="save" class="primary">保存并应用</button>
+  <button id="all">临时显示全部</button>
+  <p id="status" role="status" aria-live="polite">正在读取页面…</p>
+  <button id="diagnose">查看识别诊断</button>
+  <div id="diagnostic" hidden>
+    <p class="hint">请复制下方信息发给开发者，仅包含页面结构标记和数量，不含聊天正文。</p>
+    <textarea id="diagnostic-text" readonly aria-label="页面结构诊断" rows="8"></textarea>
+  </div>
+  <details>
+    <summary>卡片识别帮助</summary>
+    <p class="hint">点选一张卡片，确认绿色边框覆盖整张卡片。扩展会记住同类卡片的结构。</p>
+    <button id="pick">手动识别卡片</button>
+    <button id="reset">重置手动识别</button>
+  </details>
+  <p class="hint">只调整本机页面显示。隐藏仍保留页面节点，不能保证解决加载或内存卡顿。</p>
+</body>
+</html>

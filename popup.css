@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body { width: 320px; margin: 0; padding: 20px; font: 14px/1.5 system-ui, sans-serif; color: #25332f; background: #f7faf9; }
+h1 { margin: 0 0 18px; font-size: 18px; }
+.switch { display: flex; gap: 8px; align-items: center; margin-bottom: 18px; }
+.field { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+input[type="number"] { width: 70px; padding: 6px; border: 1px solid #bbc8c2; border-radius: 6px; }
+input[type="checkbox"] { accent-color: #08775f; }
+button { width: 100%; margin-top: 8px; padding: 9px; border: 1px solid #bbc8c2; border-radius: 7px; background: white; color: inherit; cursor: pointer; }
+button:hover { background: #eaf1ee; }
+button:disabled { opacity: .5; cursor: default; }
+.primary { background: #08775f; border-color: #08775f; color: white; }
+.primary:hover { background: #065d4a; }
+.hint { color: #65736d; font-size: 12px; }
+#status { min-height: 40px; font-size: 12px; }
+#diagnostic-text { width: 100%; font: 11px/1.4 monospace; resize: vertical; }
+details { border-top: 1px solid #dce4df; padding-top: 12px; }
+summary { cursor: pointer; }

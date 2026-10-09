@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT 精简显示",
+  "version": "1.0.3",
+  "description": "仅展示最近的会话轮次和工具卡片，默认各保留 5 条，可随时显示全部。",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_title": "ChatGPT 精简显示",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+    "js": ["content.js"],
+    "css": ["content.css"],
+    "run_at": "document_start"
+  }]
+}
